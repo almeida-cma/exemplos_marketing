@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Animação HTML5 semelhante a uma GIF</title>
+<style>
+  /* Estilos CSS para o elemento que será animado */
+  #animated-element {
+    width: 100px;
+    height: 100px;
+    background-color: #007bff;
+    position: relative;
+    animation: moveRightLeft 2s linear infinite; /* Animação moveRightLeft com duração de 2 segundos */
+  }
+  
+  /* Definição da animação moveRightLeft */
+  @keyframes moveRightLeft {
+    0% {
+      left: 0;
+    }
+    50% {
+      left: calc(100% - 100px); /* Move o elemento para a direita */
+      background-color: #ff5722; /* Altera a cor de fundo ao meio da animação */
+    }
+    100% {
+      left: 0; /* Move o elemento de volta para a esquerda */
+    }
+  }
+</style>
+</head>
+<body>
+
+<div id="animated-element"></div>
+
+</body>
+</html>

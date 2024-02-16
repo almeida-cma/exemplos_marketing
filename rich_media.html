@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exemplo de Publicidade em Rich Media</title>
+<style>
+  /* Estilos CSS para o banner */
+  #banner {
+    width: 300px;
+    height: 250px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    position: relative;
+    overflow: hidden;
+    animation: fadeInOut 5s infinite alternate; /* Animação fade in/out */
+  }
+  #banner img {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+  #cta-button {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: transform 0.3s; /* Transição para a animação de rotação */
+  }
+  #cta-button:hover {
+    transform: rotate(360deg);
+  }
+  
+  @keyframes fadeInOut {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div id="banner">
+  <img src="banner_image.jpg" alt="Banner de Publicidade">
+  <button id="cta-button">Clique Aqui!</button>
+</div>
+
+<script>
+  // Script para animar o botão CTA
+  document.getElementById('cta-button').addEventListener('mouseover', function() {
+    this.style.backgroundColor = '#0056b3';
+  });
+
+  document.getElementById('cta-button').addEventListener('mouseout', function() {
+    this.style.backgroundColor = '#007bff';
+  });
+
+  // Adicionar interação durante o clique no botão
+  document.getElementById('cta-button').addEventListener('click', function() {
+    alert('Obrigado por clicar!');
+  });
+</script>
+
+</body>
+</html>

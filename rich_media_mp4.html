@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Banner Rich Media com Vídeo</title>
+<style>
+  /* Estilos CSS para o banner */
+  #banner {
+    width: 300px;
+    height: 250px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  #cta-button {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  #message {
+    text-align: center;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    display: none;
+  }
+</style>
+</head>
+<body>
+
+<div id="banner">
+  <video autoplay loop muted>
+    <source src="video.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <button id="cta-button">Clique Aqui!</button>
+  <div id="message">Obrigado por clicar!</div>
+</div>
+
+<script>
+  // Script para animar o botão CTA
+  document.getElementById('cta-button').addEventListener('mouseover', function() {
+    this.style.backgroundColor = '#0056b3';
+  });
+
+  document.getElementById('cta-button').addEventListener('mouseout', function() {
+    this.style.backgroundColor = '#007bff';
+  });
+
+  // Adicionar interação após o clique no botão
+  document.getElementById('cta-button').addEventListener('click', function() {
+    document.getElementById('message').style.display = 'block'; // Exibe a mensagem
+  });
+</script>
+
+</body>
+</html>
+
+

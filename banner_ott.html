@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>One-Page com Banner Interativo</title>
+<style>
+  /* Estilos CSS para a página principal */
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  .main-content {
+    padding: 20px;
+    text-align: center;
+  }
+  #banner-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    animation: fadeIn 0.5s ease-in; /* Efeito de fade-in */
+  }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  #banner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    animation: slideIn 0.5s ease-out; /* Efeito de slide-in */
+  }
+  @keyframes slideIn {
+    from {
+      top: -100%;
+    }
+    to {
+      top: 50%;
+    }
+  }
+  #close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+  }
+  #cta-button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+  }
+  #cta-button:hover {
+    background-color: #0056b3;
+  }
+</style>
+</head>
+<body>
+
+<div class="main-content">
+  <h1>Bem-vindo à nossa página de publicidade fictícia!</h1>
+  <p>Aqui estão algumas informações incríveis sobre nosso produto ou serviço.</p>
+</div>
+
+<div id="banner-overlay">
+  <div id="banner">
+    <span id="close-button">X</span>
+    <h2>Oferta Especial!</h2>
+    <p>Não perca esta oferta exclusiva. Clique no botão abaixo para saber mais.</p>
+    <button id="cta-button">Saiba Mais</button>
+  </div>
+</div>
+
+<script>
+  // Função para exibir o banner após alguns segundos
+  setTimeout(function() {
+    document.getElementById('banner-overlay').style.display = 'block';
+  }, 5000); // Exibe o banner após 5 segundos
+
+  // Função para fechar o banner ao clicar no botão Fechar
+  document.getElementById('close-button').addEventListener('click', function() {
+    document.getElementById('banner-overlay').style.display = 'none';
+  });
+
+  // Adicionar interação após o clique no botão do banner
+  document.getElementById('cta-button').addEventListener('click', function() {
+    alert('Você clicou no botão!'); // Ação temporária, pode ser substituída por outra ação desejada
+  });
+</script>
+
+</body>
+</html>
+

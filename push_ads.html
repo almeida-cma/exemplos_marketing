@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anúncio Push</title>
+<style>
+  /* Estilos CSS para o anúncio push */
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  .push-ad-container {
+    width: 100%;
+    height: 100%;
+    background-color: #007bff;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .push-ad-content {
+    max-width: 80%;
+  }
+  .push-ad-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  .push-ad-description {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  .push-ad-button {
+    background-color: #fff;
+    color: #007bff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  .push-ad-button:hover {
+    background-color: #0056b3;
+    color: #fff;
+  }
+</style>
+</head>
+<body>
+
+<div class="push-ad-container">
+  <div class="push-ad-content">
+    <div class="push-ad-title">Oferta Especial!</div>
+    <div class="push-ad-description">Aproveite nossa oferta especial por tempo limitado. Clique no botão abaixo para saber mais.</div>
+    <button class="push-ad-button" onclick="window.location.href='oferta_especial.html'">Ver Oferta</button>
+  </div>
+</div>
+
+</body>
+</html>

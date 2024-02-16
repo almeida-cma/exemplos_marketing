@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>One-Page com Retargeting</title>
+<style>
+  /* Estilos CSS para a página */
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  .header {
+    background-color: #007bff;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  .main-content {
+    padding: 20px;
+    text-align: center;
+  }
+  .retargeting-banner {
+    background-color: #ffcc00;
+    color: #000;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
+  }
+  .retargeting-banner-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .retargeting-banner-text {
+    margin-right: 20px;
+  }
+  .retargeting-banner-button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  .retargeting-banner-button:hover {
+    background-color: #0056b3;
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>One-Page com Retargeting</h1>
+</div>
+
+<div class="main-content">
+  <h2>Seja bem-vindo à nossa página!</h2>
+  <p>Aqui está o conteúdo principal da página.</p>
+</div>
+
+<div class="retargeting-banner">
+  <div class="retargeting-banner-content">
+    <div class="retargeting-banner-text">
+      <h3>Oferta Especial para Você!</h3>
+      <p>Como você visitou nossa página, temos uma oferta especial para você. Clique no botão abaixo para saber mais.</p>
+    </div>
+    <button class="retargeting-banner-button" onclick="window.location.href='oferta_especial.html'">Ver Oferta</button>
+  </div>
+</div>
+
+</body>
+</html>
